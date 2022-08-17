@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { DataContext } from "../context/useData";
 import { Link } from "react-router-dom";
 const Countries = ({ userSearch }) => {
-  const [isUserSearching, setIsUserSearching] = useState(false);
+  
   const { countries } = useContext(DataContext);
 
   console.log(userSearch);
