@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.darkMode{
-    box-shadow: rgba(255, 255, 255, 0.24) 0px 2px 7px;
-}
-
 .flagImg{
     min-width: 300px;
 }

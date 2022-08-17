@@ -11,7 +11,7 @@ function App() {
  
   return (
   <>
-    { loading ?  <section className={`${darkMode && 'dark'} h-screen w-screen`}><Spinner /> </section> :
+    { loading ?  <section className={`${darkMode && 'dark'} h-screen w-screen`}> <Spinner /> </section> :
     <section className={`${darkMode && 'dark'} h-screen w-screen`}>
       <Nav />
       <Routes>
