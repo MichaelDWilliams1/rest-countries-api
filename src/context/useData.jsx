@@ -7,6 +7,7 @@ const DataProvider = ({children}) => {
     const [region, setRegion] = useState('all')
     const [userRegion, setUserRegion] = useState('')
     const [darkMode, setDarkMode] = useState(false)
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         const getCountries = async() => {
             const res = await fetch(
@@ -14,6 +15,7 @@ const DataProvider = ({children}) => {
             )
             const data = await res.json();
             setCountries(data)
+            setLoading(false)
         }
       getCountries()
     }, [region, userRegion])
@@ -35,7 +37,7 @@ setDarkMode(prev => !prev)
     }
 
 return (
-    <DataContext.Provider value={{ countries, filterCountries, reset, toggleDarkMode, darkMode }}>
+    <DataContext.Provider value={{ countries, filterCountries, reset, toggleDarkMode, darkMode, loading }}>
         {children}
     </DataContext.Provider>
 )

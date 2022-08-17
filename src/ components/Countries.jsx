@@ -61,7 +61,7 @@ const Countries = ({ userSearch }) => {
               <section
                 key={country?.alpha2Code}
                 id={country?.numericCode}
-                className="shadow-md flex flex-col h-80 w-80 m-3 dark:bg-slate-800 dark:shadow-dk"
+                className="shadow-md flex flex-col h-80 w-80 m-3 dark:bg-slate-700 dark:shadow-dk"
               >
                 <div key={country?.alpha3Code} className="h-2/4 full">
                   <img
