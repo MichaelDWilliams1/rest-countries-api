@@ -18,14 +18,14 @@ const Country = () => {
         </div>
         <main className="w-auto flex flex-col lg:flex-row h-auto ml-10 md:items-center lg:ml-20
          lg:items-center dark:text-gray-50">
-          <div className="imageContainer flex lg:mr-10 h-full w-1/2">
+          <div className="imageContainer flex lg:mr-10 h-80 w-1/2">
             <img
               className="flagImg h-full w-full"
               src={currentCountry?.flag}
             />
           </div>
           <div className=" h-full w-1/2 lg:mr-20  flex flex-col">
-            <div className="h-20 w-72 pt-6 lg:pt-0">{currentCountry?.name}</div>
+            <div className="h-20 w-72 pt-6 text-4xl font-bold mb-8 lg:md-8 lg:pt-0">{currentCountry?.name}</div>
             <div className="flex flex-col lg:flex-row  h-48">
               <div className="w-72  lg:w-1/2">
                 <p className="font-bold leading-6">
@@ -37,7 +37,7 @@ const Country = () => {
                 <p className="font-bold leading-6">
                   Population:{" "}
                   <span className="font-normal">
-                    {currentCountry?.population}
+                    {currentCountry?.population.toLocaleString()}
                   </span>
                 </p>
                 <p className="font-bold leading-6">

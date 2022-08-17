@@ -40,7 +40,7 @@ const Countries = ({ userSearch }) => {
                     </h2>
                     <p key={country?.population} className="font-bold text-sm">
                       Population:{" "}
-                      <span className="font-normal">{country?.population}</span>
+                      <span className="font-normal">{country?.population.toLocaleString()}</span>
                     </p>
                     <p key={country?.region} className="font-bold text-sm">
                       Region:{" "}
@@ -79,7 +79,7 @@ const Countries = ({ userSearch }) => {
                   </h2>
                   <p key={country?.population} className="font-bold text-sm">
                     Population:{" "}
-                    <span className="font-normal">{country?.population}</span>
+                    <span className="font-normal">{country?.population.toLocaleString()}</span>
                   </p>
                   <p key={country?.region} className="font-bold text-sm">
                     Region:{" "}
